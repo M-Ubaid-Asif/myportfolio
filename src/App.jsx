@@ -1,36 +1,37 @@
-import { useState } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Main,
+  Navbar,
+  Tech,
+  Works,
+  StarsCanvas,
+} from "./components";
 
+const App = () => {
   return (
-    <div className="bg-hero-pattern bg-cover bg-no-repeat w-100 h-100">
-      <Router>
-        <div className='relative z-0 bg-primary'>
+    <BrowserRouter>
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
-          <div className="bg-hero-pattern bg-cover bg-no-repeat mb-12" style={{ border: '2px solid red', boxSizing: 'border-box', height: '100vh' }}>
+          <Main />
+        </div>
+      </div>
+      <About />
+      <Experience />
+      <Tech />
+      <Works />
+      <Feedbacks />
+      <div className="relative z-0">
+        <Contact />
+        <StarsCanvas />
+      </div>
+    </BrowserRouter>
+  );
+};
 
-            {/* 
-            <About />
-            <Experience />
-            <Works />
-            <Tech />
-            <Feedbacks /> */}
-
-
-
-            {/* <div className="relative z-0"> */}
-            {/* < Contact />
-            <StarsCanvas /> */}
-            {/* </div> */}
-            <Hero />
-          </div >
-        </div >
-      </Router >
-    </div >
-  )
-}
-
-export default App
+export default App;

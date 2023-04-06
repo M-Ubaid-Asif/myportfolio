@@ -1,0 +1,9 @@
+@media screen  and (max-width:300px){
+    .side-head{
+        font-size: 10px;
+        
+    }
+    .main-head{
+        font-size: 18px;
+    }
+}
